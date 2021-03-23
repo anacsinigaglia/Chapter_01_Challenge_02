@@ -33,12 +33,10 @@ function checksCreateTodosUserAvailability(request, response, next) {
     return next();
   }
 
-  return response
-    .status(403)
-    .json({
-      error:
-        "Limit of 10 Todos already reached. Please delete a Todo or activate the Pro plan",
-    });
+  return response.status(403).json({
+    error:
+      "Limit of 10 Todos already reached. Please delete a Todo or activate the Pro plan",
+  });
 }
 
 function checksTodoExists(request, response, next) {
